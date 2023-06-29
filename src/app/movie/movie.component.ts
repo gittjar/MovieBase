@@ -14,13 +14,7 @@ export class MovieComponent implements OnInit {
   constructor (private hpservice : ElokuvaService) {}
 
   ngOnInit(): void {
-   // this.getMovies();
    this.getElokuvat();
-  }
-
-
-  getMovies():void{
-    this.hpservice.getMovies().subscribe(movielist => this.movielist = movielist);
   }
 
   elokuvalista: any;

@@ -1,6 +1,6 @@
 {
     "/api": {
-      "target": "https://movierajapinta.azurewebsites.net/api/Movies",
+      "target": "https://movieapi2023.azurewebsites.net/api/Movies/",
       "secure": false,
       "pathRewrite": {
         "^/api": ""

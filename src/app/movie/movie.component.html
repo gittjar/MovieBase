@@ -1,6 +1,14 @@
+<section class="main">
 
-Movie works now!
-<ul *ngFor="let movie of elokuvalista">
+    <aside class="haku">
+        Hakunapit
+    </aside>
 
+    <article class="elokuvalista">
+    <ul *ngFor="let movie of elokuvalista">
     <li>{{movie.title}}</li>
-</ul>
+    </ul>
+    </article>
+
+
+</section>
