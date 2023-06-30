@@ -15,6 +15,8 @@ export class MovieComponent implements OnInit {
 
   ngOnInit(): void {
    this.getElokuvat();
+   this.loadingDataWindow();
+
   }
 
   elokuvalista: any;
@@ -24,5 +26,13 @@ export class MovieComponent implements OnInit {
       this.elokuvalista = data;
     })
   }
+
+  isLoading: boolean = true;
+  loadingDataWindow() {
+    setTimeout(() => {
+    // Data loading is complete
+    this.isLoading = false;
+    }, 2700);
+}
 
 }

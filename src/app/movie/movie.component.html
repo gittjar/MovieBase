@@ -1,13 +1,27 @@
 <section class="main">
+    <div *ngIf="isLoading" class="loading-message">
+        <p>Loading data from API...Please wait</p>
+      
+      </div>
+
+            <!-- Your regular content -->
 
     <aside class="haku">
         Hakunapit
     </aside>
 
     <article class="elokuvalista">
-    <ul *ngFor="let movie of elokuvalista">
-    <li>{{movie.title}}</li>
-    </ul>
+    <article *ngFor="let movie of elokuvalista">
+
+    <article class="movie-card">
+        <figure><img src="{{movie.image}}"></figure>
+        <ul>
+        <li class="card-title">[{{movie.id}}] {{movie.title}}</li>
+        <li class="card-text">{{movie.price}} € </li>
+        </ul>
+    </article>
+
+    </article>
     </article>
 
 
