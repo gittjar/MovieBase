@@ -1,10 +1,5 @@
 <section class="main">
-    <div class="infobox-container" *ngIf="isLoading">
-        <div class="infobox">
-          <span class="loading-message">Loading data..Please wait</span>
-          <div class="loading-animation"></div>
-        </div>
-      </div>
+
 
             <!-- Your regular content -->
 
@@ -12,21 +7,32 @@
         Hakunapit
     </aside>
 
+
+
     <article class="elokuvalista">
+        <div class="infobox-container" *ngIf="isLoading">
+            <div class="infobox">
+              <span class="loading-message">Loading data..Please wait</span>
+              <div class="loading-animation"></div>
+            </div> </div>
+       
     <article *ngFor="let movie of elokuvalista">
 
     <article class="movie-card">
         
         <figure><img src="{{movie.image}}"></figure>  
         <ul>
-        <li class="card-title"> {{movie.title}}</li>
-        <li class="card-text">{{movie.price}} € </li>
+        <li class="card-title"> {{movie.title}} ({{movie.releaseDate | date : 'yyyy'}})</li>
+        <li class="card-text">Hinta: {{movie.price}} € </li>
+        <li class="card-text">Rating: {{movie.rating}}</li>
+       
         </ul>
-        <div class="card-id">{{movie.rating}}</div>
+       
 
     </article>
 
     </article>
+
     </article>
 
 

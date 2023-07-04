@@ -77,6 +77,11 @@
   .card-text {
     font-size: 1rem;
   }
+
+  ul {
+    list-style-type: none;
+  }
+
   figure {
     width: 10%;
     margin: 0;
