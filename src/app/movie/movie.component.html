@@ -4,7 +4,8 @@
             <!-- Your regular content -->
 
     <aside class="haku">
-        Hakunapit
+        Search and Sort<br>
+        <input class="hakukentta">
     </aside>
 
 
@@ -14,25 +15,22 @@
             <div class="infobox">
               <span class="loading-message">Loading data..Please wait</span>
               <div class="loading-animation"></div>
-            </div> </div>
-       
+            </div> </div>   
     <article *ngFor="let movie of elokuvalista">
-
     <article class="movie-card">
         
         <figure><img src="{{movie.image}}"></figure>  
         <ul>
         <li class="card-title"> {{movie.title}} ({{movie.releaseDate | date : 'yyyy'}})</li>
-        <li class="card-text">Hinta: {{movie.price}} € </li>
+        <li class="card-text">Genre: {{movie.genre}}</li>
+        <li class="card-text">Price: {{movie.price}} € </li>
         <li class="card-text">Rating: {{movie.rating}}</li>
        
         </ul>
        
 
     </article>
-
     </article>
-
     </article>
 
 
