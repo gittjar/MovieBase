@@ -4,8 +4,15 @@
             <!-- Your regular content -->
 
     <aside class="haku">
+        <section class="hakualue">
         Search and Sort<br>
-        <input class="hakukentta">
+        <input
+        type="text"
+        class="hakukentta"
+        placeholder="Type your search.."
+        [(ngModel)]="term"
+        />
+    </section>
     </aside>
 
 
@@ -16,7 +23,7 @@
               <span class="loading-message">Loading data..Please wait</span>
               <div class="loading-animation"></div>
             </div> </div>   
-    <article *ngFor="let movie of elokuvalista">
+    <article *ngFor="let movie of elokuvalista | filter:term">
     <article class="movie-card">
         
         <figure><img src="{{movie.image}}"></figure>  

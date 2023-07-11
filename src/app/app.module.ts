@@ -8,19 +8,25 @@ import { MovieComponent } from './movie/movie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FormsModule } from '@angular/forms';
+import { CustomFilterPipe } from './custom-filter-pipe.pipe'; // search filter
+
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
-    NavbarComponent
+    NavbarComponent,
+    CustomFilterPipe,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
