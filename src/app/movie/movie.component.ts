@@ -10,6 +10,7 @@ import { Movie } from '../models/movie.model';
 export class MovieComponent implements OnInit {
 
   movielist: Movie [] = [];
+  term = '';
 
   constructor (private hpservice : ElokuvaService) {}
 
