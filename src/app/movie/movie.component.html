@@ -14,15 +14,15 @@
         />
     </section>
     </aside>
-
+    <div class="infobox-container" *ngIf="isLoading">
+        <div class="infobox">
+          <span class="loading-message">Loading data..Please wait</span>
+          <div class="loading-animation"></div>
+        </div> </div> 
 
 
     <article class="elokuvalista">
-        <div class="infobox-container" *ngIf="isLoading">
-            <div class="infobox">
-              <span class="loading-message">Loading data..Please wait</span>
-              <div class="loading-animation"></div>
-            </div> </div>   
+  
     <article *ngFor="let movie of elokuvalista | filter:term" class="cardslist" >
     <article class="movie-card">
         

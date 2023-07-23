@@ -14,9 +14,7 @@
         margin-top: 1%;
         margin-bottom: 0.5%;
     }
-    .hakualue {
-        margin-left: 2%;
-    }
+
 
     .hakukentta {
             appearance: none;
@@ -51,6 +49,9 @@
             figure img {
                 height: 100%;
                 object-fit: cover;
+            }
+            .hakualue {
+                margin-left: 2%;
             }
 
             .elokuvalista
@@ -138,6 +139,32 @@
             figure img {
                 max-width: 100%;
             }
+            .hakualue {
+                margin-left: 2%;
+            }
+
+            .elokuvalista
+            {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-left: 2%;
+                margin-bottom: 5%;
+            }
+
+            .cardslist {
+                margin: 0.2%;
+            }
+            .movie-card {
+                border: 2px solid rgb(113, 254, 235);
+                display: flex;
+                flex-direction: row;
+                width: 25rem;
+                height: 100%;
+                padding: 1%;
+                border-radius: 5px 5px 5px 5px;
+              }
 
     }
 
@@ -147,5 +174,25 @@
         figure {
            display: none;
             }    
+
+            .hakualue {
+                margin-left: 2%;
+            }
+
+
+            .cardslist {
+                margin: 0.2%;
+            }
+            .movie-card {
+                border: 2px solid rgb(113, 254, 235);
+                display: flex;
+                flex-direction: row;
+                width: 25rem;
+                height: 100%;
+                padding: 1%;
+                border-radius: 5px 5px 5px 5px;
+                margin-left: 2%;
+                margin-right: 2%;
+              }
    
      }
