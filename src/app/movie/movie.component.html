@@ -12,8 +12,10 @@
         placeholder="Type your search.."
         [(ngModel)]="term"
         />
-        <button class="hakunapit">Comedy</button>
-        <button class="hakunapit">Action</button>
+        <button class="hakunapit" (click)="SearchComedy()">Comedy</button>
+        <button class="hakunapit" (click)="SearchAction()">Action</button>
+        <button class="hakunapit" (click)="getReleaseDatesEka()">1990-2000</button>
+
     </section>
     </aside>
     <div class="infobox-container" *ngIf="isLoading">

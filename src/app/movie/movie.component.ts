@@ -36,4 +36,25 @@ export class MovieComponent implements OnInit {
     }, 2700);
 }
 
+SearchComedy() {
+  this.getElokuvat();
+  this.term = 'Comedy'
+}
+SearchAction() {
+  this.getElokuvat(); // reset to default
+  this.term = 'Action'
+}
+
+getReleaseDatesEka(): void {
+  this.getElokuvat(); // reset to default
+  this.term = ''; // reset to default
+  this.elokuvalista = this.elokuvalista.filter(
+    (item: { releaseDate: string | number | Date; }) => {
+      const releaseYear = new Date(item.releaseDate).getFullYear();
+      return releaseYear >= 1990 && releaseYear <= 2000;
+    }
+  );
+}
+
+
 }
