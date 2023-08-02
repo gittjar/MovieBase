@@ -28,7 +28,17 @@
         
     }
  
+ .hakunapit {
+    padding: 0.5%;
+    margin: 0.5%;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(113, 254, 235);
+    border: none;
+ }
 
+ .hakunapit:hover {
+    opacity: 0.8;
+ }
   
   
 
