@@ -9,7 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FormsModule } from '@angular/forms';
-import { CustomFilterPipe } from './custom-filter-pipe.pipe'; // search filter
+import { CustomFilterPipe } from './custom-filter-pipe.pipe';
+import { LoadingComponent } from './loading/loading.component'; // search filter
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { CustomFilterPipe } from './custom-filter-pipe.pipe'; // search filter
     MovieComponent,
     NavbarComponent,
     CustomFilterPipe,
+    LoadingComponent,
     
   ],
   imports: [

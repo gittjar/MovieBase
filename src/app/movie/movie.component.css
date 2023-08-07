@@ -117,31 +117,15 @@
                 border: 3px rgb(0, 34, 62) solid;
                 border-radius: 10px 10px 10px 10px;
               }
+
               
-              .loading-message {
-                margin-right: 0;
-              }
+    
               
-              .loading-animation {
-                width: 20px;
-                height: 20px;
-                border: 2px solid rgb(0, 34, 62);;
-                border-top-color: transparent;
-                border-radius: 50%;
-                animation: loading 3s infinite linear;
-              }
-              
-              @keyframes loading {
-                0% {
-                  transform: rotate(0deg);
-                }
-                100% {
-                  transform: rotate(360deg);
-                }
-              } 
+          
       }
 
     /* Tablet CSS rules */ 
+    
     @media only screen and (min-width: 426px) 
     {  
         figure {
@@ -167,6 +151,8 @@
 
             .cardslist {
                 margin: 0.2%;
+          
+                
             }
             .movie-card {
                 border: 2px solid rgb(113, 254, 235);

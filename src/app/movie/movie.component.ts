@@ -11,12 +11,13 @@ export class MovieComponent implements OnInit {
 
   movielist: Movie [] = [];
   term = '';
+  loading: boolean = true;
+
 
   constructor (private hpservice : ElokuvaService) {}
 
   ngOnInit(): void {
    this.getElokuvat();
-   this.loadingDataWindow();
 
   }
 
@@ -25,16 +26,11 @@ export class MovieComponent implements OnInit {
   getElokuvat():void{
     this.hpservice.getMovieData().subscribe((data: any) => {
       this.elokuvalista = data;
+      this.loading = false; // Hide the loading window when data is loaded
     })
   }
 
-  isLoading: boolean = true;
-  loadingDataWindow() {
-    setTimeout(() => {
-    // Data loading is complete
-    this.isLoading = false;
-    }, 2700);
-}
+
 
 SearchComedy() {
   this.getElokuvat(); // reset to default

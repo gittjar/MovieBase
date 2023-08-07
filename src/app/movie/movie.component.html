@@ -18,16 +18,14 @@
 
     </section>
     </aside>
-    <div class="infobox-container" *ngIf="isLoading">
-        <div class="infobox">
-          <span class="loading-message">Loading data..Please wait</span>
-          <div class="loading-animation"></div>
-        </div> </div> 
+   
 
-
+    <app-loading *ngIf="loading"></app-loading>
+    <div *ngIf="!loading">
     <article class="elokuvalista">
-  
+    
     <article *ngFor="let movie of elokuvalista | filter:term" class="cardslist" >
+ 
     <article class="movie-card">
         
         <figure><img src="{{movie.image}}"></figure>  
@@ -38,11 +36,10 @@
         <li class="card-text">Rating: {{movie.rating}}</li>
        
         </ul>
-       
-
     </article>
     </article>
-    </article>
+</article>>
+</div>
 
 
 </section>
