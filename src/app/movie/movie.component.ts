@@ -37,7 +37,7 @@ export class MovieComponent implements OnInit {
 }
 
 SearchComedy() {
-  this.getElokuvat();
+  this.getElokuvat(); // reset to default
   this.term = 'Comedy'
 }
 SearchAction() {
@@ -48,6 +48,7 @@ SearchAction() {
 getReleaseDatesEka(): void {
   this.getElokuvat(); // reset to default
   this.term = ''; // reset to default
+  // filter elokuvalista 1990-2000
   this.elokuvalista = this.elokuvalista.filter(
     (item: { releaseDate: string | number | Date; }) => {
       const releaseYear = new Date(item.releaseDate).getFullYear();
