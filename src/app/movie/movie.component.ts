@@ -42,7 +42,7 @@ SearchAction() {
 }
 
 getReleaseDatesEka(): void {
-  this.getElokuvat(); // reset to default
+  //this.getElokuvat(); // reset to default
   this.term = ''; // reset to default
   // filter elokuvalista between 1990-2000
   this.elokuvalista = this.elokuvalista.filter(
@@ -58,8 +58,18 @@ sortA(isAsc: boolean) {
     this.elokuvalista.sort((a: { title: string; }, b: { title: string; }) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0)
   )} else {
     this.elokuvalista.sort((a: { title: string; }, b: { title: string; }) => (a.title > b.title) ? -1 : ((b.title > a.title) ? 1 : 0)
-  )}
+  )} 
 }
-
-
+// Sort by date
+sortB(isAsc: boolean) {
+  if (isAsc) {
+    this.elokuvalista.sort((a: { releaseDate: Date; }, b: { releaseDate: Date; }) => {
+      return a.releaseDate > b.releaseDate ? 1 : a.releaseDate < b.releaseDate ? -1 : 0;
+    });
+  } else {
+    this.elokuvalista.sort((a: { releaseDate: Date; }, b: { releaseDate: Date; }) => {
+      return a.releaseDate > b.releaseDate ? -1 : a.releaseDate < b.releaseDate ? 1 : 0;
+    });
+  }
+  }
 }
