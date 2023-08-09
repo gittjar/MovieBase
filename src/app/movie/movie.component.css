@@ -5,30 +5,26 @@
     display: flex;
     flex-direction: column;
     padding-top: 4rem; /* adjust this value to match the height of your navbar */
-
-}
-
-.haku
-    {
-        width: 100%;
-        margin-top: 1%;
-        margin-bottom: 0.5%;
     }
 
+.haku {
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+    }
 
-    .hakukentta {
-            appearance: none;
-            border: none;
-            outline: none;
-            border-bottom: .2em solid rgb(113, 254, 235);
-            background: rgba(rgb(113, 254, 235), .2);
-            border-radius: 7px 7px 7px 7px;
-            padding: .4em;
-            color: black;            
-        
+.hakukentta {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid rgb(113, 254, 235);
+    background: rgba(rgb(113, 254, 235), .2);
+    border-radius: 7px 7px 7px 7px;
+    padding: .4em;
+    color: black;             
     }
  
- .hakunapit {
+.hakunapit {
     padding: 0.5%;
     margin-left: 0.5%;
     color: black;
@@ -36,51 +32,47 @@
     border-radius: 10px 10px 10px 10px;
     background-color: rgb(113, 254, 235);
     border: 2px black solid;
- }
+    }
 
- .hakunapit:hover {
+.hakunapit:hover {
     opacity: 0.8;
- }
-  
-  
+    }
 
-
+.movie-card:hover{
+    border: 1px solid rgb(113, 254, 235);
+    }
+  
   ul {
     list-style-type: none;
   }
 
+/* Desktop CSS rules */ 
+@media only screen and (min-width: 769px) 
+{
+figure {
+        width: 100%;
+        margin-right: 10px;
+       }    
+figure img {
+        height: 100%;
+        object-fit: cover;
+      }
+.hakualue {
+        margin-left: 2%;
+        }
+.elokuvalista {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 2%;
+        margin-bottom: 5%;
+        }
+.cardslist {
+        margin: 0.2%;
+        }
 
-
-    /* Desktop CSS rules */ 
-    @media only screen and (min-width: 769px) 
-    {
-        figure {
-            width: 100%;
-            margin-right: 10px;
-            }    
-            figure img {
-                height: 100%;
-                object-fit: cover;
-            }
-            .hakualue {
-                margin-left: 2%;
-            }
-
-            .elokuvalista
-            {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                margin-left: 2%;
-                margin-bottom: 5%;
-            }
-
-            .cardslist {
-                margin: 0.2%;
-            }
-
-  .movie-card {
+.movie-card {
     border: 2px solid rgb(113, 254, 235);
     display: flex;
     flex-direction: row;
@@ -88,109 +80,95 @@
     height: 100%;
     padding: 1%;
     border-radius: 5px 5px 5px 5px;
-  }
-  .card-id{
+    }
+
+.card-id{
     font-size: 2.2rem;
     margin-left: 1%;
     margin-right: 1%;
   }
-  .card-title {
+.card-title {
     font-size: 1.2rem;
   }
-  .card-text {
+.card-text {
     font-size: 1rem;
   }
-
-            .infobox-container {
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                width: 270px;
-              }
+.infobox-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 270px;
+    }
               
-              .infobox {
-                background-color: rgb(113, 254, 235);
-                color: rgb(0, 34, 62);
-                padding: 10px;
-                display: flex;
-                align-items: center;
-                border: 3px rgb(0, 34, 62) solid;
-                border-radius: 10px 10px 10px 10px;
-              }
+.infobox {
+    background-color: rgb(113, 254, 235);
+    color: rgb(0, 34, 62);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border: 3px rgb(0, 34, 62) solid;
+    border-radius: 10px 10px 10px 10px;
+    }
+}
 
-              
+/* Tablet CSS rules */ 
     
-              
-          
-      }
-
-    /* Tablet CSS rules */ 
-    
-    @media only screen and (min-width: 426px) 
-    {  
-        figure {
-            width: 15%;
-            margin: 0;
-            }    
-            figure img {
-                max-width: 100%;
-            }
-            .hakualue {
-                margin-left: 2%;
-            }
-
-            .elokuvalista
-            {
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                margin-left: 2%;
-                margin-bottom: 5%;
-            }
-
-            .cardslist {
-                margin: 0.2%;
-          
-                
-            }
-            .movie-card {
-                border: 2px solid rgb(113, 254, 235);
-                display: flex;
-                flex-direction: row;
-                width: 25rem;
-                height: 100%;
-                padding: 1%;
-                border-radius: 5px 5px 5px 5px;
-              }
-
+@media only screen and (min-width: 426px) 
+{  
+figure {
+    width: 15%;
+    margin: 0;
+    }    
+figure img {
+    max-width: 100%;
+    }
+.hakualue {
+    margin-left: 2%;
+    }
+.elokuvalista {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 2%;
+    margin-bottom: 5%;
     }
 
-    /* Mobile CSS rules */ 
-    @media only screen and (max-width: 425px) 
-    { 
-        figure {
-           display: none;
-            }    
+.cardslist {
+    margin: 0.2%;
+    }
+.movie-card {
+    border: 2px solid rgb(113, 254, 235);
+    display: flex;
+    flex-direction: row;
+    width: 25rem;
+    height: 100%;
+    padding: 1%;
+    border-radius: 5px 5px 5px 5px;
+    }
+}
 
-            .hakualue {
-                margin-left: 2%;
-            }
-
-
-            .cardslist {
-                margin: 0.2%;
-            }
-            .movie-card {
-                border: 2px solid rgb(113, 254, 235);
-                display: flex;
-                flex-direction: row;
-                width: 25rem;
-                height: 100%;
-                padding: 1%;
-                border-radius: 5px 5px 5px 5px;
-                margin-left: 2%;
-                margin-right: 2%;
-              }
-   
-     }
+/* Mobile CSS rules */ 
+@media only screen and (max-width: 425px) 
+{ 
+figure {
+    display: none;
+    }    
+.hakualue {
+    margin-left: 2%;
+    }
+.cardslist {
+    margin: 0.2%;
+    }
+.movie-card {
+    border: 2px solid rgb(113, 254, 235);
+    display: flex;
+    flex-direction: row;
+    width: 25rem;
+    height: 100%;
+    padding: 1%;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+    }
+}
