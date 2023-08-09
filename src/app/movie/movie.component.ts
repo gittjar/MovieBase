@@ -34,23 +34,31 @@ export class MovieComponent implements OnInit {
 
 SearchComedy() {
   this.getElokuvat(); // reset to default
-  this.term = 'Comedy'
+  this.term = 'Comedy';
 }
 SearchAction() {
   this.getElokuvat(); // reset to default
-  this.term = 'Action'
+  this.term = 'Action';
 }
 
 getReleaseDatesEka(): void {
   this.getElokuvat(); // reset to default
   this.term = ''; // reset to default
-  // filter elokuvalista 1990-2000
+  // filter elokuvalista between 1990-2000
   this.elokuvalista = this.elokuvalista.filter(
     (item: { releaseDate: string | number | Date; }) => {
       const releaseYear = new Date(item.releaseDate).getFullYear();
       return releaseYear >= 1990 && releaseYear <= 2000;
     }
   );
+}
+// sorted by title
+sortA(isAsc: boolean) {
+  if (isAsc) {
+    this.elokuvalista.sort((a: { title: string; }, b: { title: string; }) => (a.title > b.title) ? 1 : ((b.title > a.title) ? -1 : 0)
+  )} else {
+    this.elokuvalista.sort((a: { title: string; }, b: { title: string; }) => (a.title > b.title) ? -1 : ((b.title > a.title) ? 1 : 0)
+  )}
 }
 
 
