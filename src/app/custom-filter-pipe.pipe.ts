@@ -1,5 +1,12 @@
 import { Pipe, PipeTransform, Injectable } from "@angular/core";
 
+@Pipe({name: 'toDate'})
+export class ToDatePipe implements PipeTransform {
+  transform(value: string): Date {
+    return new Date(value);
+  }
+}
+
 @Pipe({
   name: "filter",
   pure: false
