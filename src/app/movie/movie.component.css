@@ -19,7 +19,7 @@
     outline: none;
     border-bottom: .2em solid rgb(113, 254, 235);
     background: rgba(rgb(113, 254, 235), .2);
-    border-radius: 7px 7px 7px 7px;
+    border-radius: 2px 7px 7px 7px;
     padding: .4em;
     color: black;             
     }
@@ -29,7 +29,7 @@
     margin-left: 0.5%;
     color: black;
     font-weight: 600;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 3px 10px 10px 10px;
     background-color: rgb(113, 254, 235);
     border: 2px black solid;
     }
