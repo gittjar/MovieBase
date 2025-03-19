@@ -1,174 +1,146 @@
 .main {
-    background-color: rgb(0, 34, 62);
-    color: rgb(113, 254, 235);
+    background-color: #f5f5f7;
+    color: #1d1d1f; 
     font-weight: 400;
     display: flex;
     flex-direction: column;
-    padding-top: 4rem; /* adjust this value to match the height of your navbar */
-    }
+    padding-top: 4rem;
+}
 
 .haku {
     width: 100%;
     margin-top: 1%;
-    margin-bottom: 0.5%;
-    }
+    margin-bottom: 1.5%;
+}
 
 .hakukentta {
     appearance: none;
     border: none;
     outline: none;
-    border-bottom: .2em solid rgb(113, 254, 235);
-    background: rgba(rgb(113, 254, 235), .2);
+    border-bottom: .2em solid #0071e3; 
+    background: rgba(0, 113, 227, .1);
     border-radius: 2px 7px 7px 7px;
     padding: .4em;
-    color: black;             
-    }
- 
+    color: #1d1d1f; 
+    margin-left: 2%;
+}
+
 .hakunapit {
-    padding: 0.5%;
+    padding: 0.75%;
     margin-left: 0.5%;
-    color: black;
+    color: #ffffff; 
     font-weight: 600;
-    border-radius: 3px 10px 10px 10px;
-    background-color: rgb(113, 254, 235);
-    border: 2px black solid;
-    }
+    border-radius: 10px 10px 10px 10px;
+    background-color: #0071e3;
+    border: 1px solid #0071e3;
+}
 
 .hakunapit:hover {
-    opacity: 0.8;
-    }
-
-.movie-card:hover{
-    border: 1px solid rgb(113, 254, 235);
-    }
-  
-  ul {
-    list-style-type: none;
-  }
-
-/* Desktop CSS rules */ 
-@media only screen and (min-width: 769px) 
-{
-figure {
-        width: 100%;
-        margin-right: 10px;
-       }    
-figure img {
-        height: 100%;
-        object-fit: cover;
-      }
-.hakualue {
-        margin-left: 2%;
-        }
-.elokuvalista {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-left: 2%;
-        margin-bottom: 5%;
-        }
-.cardslist {
-        margin: 0.2%;
-        }
+    background-color: transparent;
+    color: #0071e3;
+    border: 1px solid #0071e3;
+}
 
 .movie-card {
-    border: 2px solid rgb(113, 254, 235);
     display: flex;
-    flex-direction: row;
-    width: 25rem;
-    height: 100%;
-    padding: 1%;
-    border-radius: 5px 5px 5px 5px;
-    }
+    border: 1px solid #d2d2d7; 
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    height: 200px; 
+    background-color: #ffffff; 
+}
 
-.card-id{
-    font-size: 2.2rem;
-    margin-left: 1%;
-    margin-right: 1%;
-  }
-.card-title {
-    font-size: 1.2rem;
-  }
-.card-text {
-    font-size: 1rem;
-  }
-.infobox-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 270px;
-    }
-              
-.infobox {
-    background-color: rgb(113, 254, 235);
-    color: rgb(0, 34, 62);
-    padding: 10px;
+.movie-card:hover {
+    border: 1px solid #0071e3; 
+}
+
+figure {
+    margin: 0;
+    width: 25%; 
+    height: 100%; 
+    overflow: hidden;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.no-image {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    border: 3px rgb(0, 34, 62) solid;
-    border-radius: 10px 10px 10px 10px;
-    }
+    justify-content: center;
+    background-color: #f5f5f7; 
+    color: #0071e3; 
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
 }
 
-/* Tablet CSS rules */ 
-    
-@media only screen and (min-width: 426px) 
-{  
-figure {
-    width: 15%;
+.card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 75%; 
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1d1d1f; 
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #1d1d1f; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
-    }    
-figure img {
-    max-width: 100%;
-    }
-.hakualue {
-    margin-left: 2%;
-    }
-.elokuvalista {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-left: 2%;
-    margin-bottom: 5%;
-    }
+}
 
-.cardslist {
-    margin: 0.2%;
-    }
-.movie-card {
-    border: 2px solid rgb(113, 254, 235);
-    display: flex;
-    flex-direction: row;
-    width: 25rem;
-    height: 100%;
-    padding: 1%;
-    border-radius: 5px 5px 5px 5px;
+/* Desktop CSS rules */
+@media only screen and (min-width: 769px) {
+    .elokuvalista {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 5%;
     }
 }
 
-/* Mobile CSS rules */ 
-@media only screen and (max-width: 425px) 
-{ 
-figure {
-    display: none;
-    }    
-.hakualue {
-    margin-left: 2%;
+/* Tablet CSS rules */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .elokuvalista {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-left: 2%;
+        margin-bottom: 5%;
     }
-.cardslist {
-    margin: 0.2%;
+}
+
+/* Mobile CSS rules */
+@media only screen and (max-width: 425px) {
+    .elokuvalista {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-left: 2%;
+        margin-bottom: 5%;
     }
-.movie-card {
-    border: 2px solid rgb(113, 254, 235);
-    display: flex;
-    flex-direction: row;
-    width: 25rem;
-    height: 100%;
-    padding: 1%;
-    border-radius: 5px 5px 5px 5px;
-    margin-left: 2%;
-    margin-right: 2%;
+    .hakunapit {
+        width: 100%;
+        margin: 0.5rem 0;
     }
 }

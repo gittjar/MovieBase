@@ -10,7 +10,7 @@ export class ElokuvaService {
 
   constructor(private http : HttpClient) { }
 
-  BASEURL = 'https://corsproxy.io/?https://movieapi2023.azurewebsites.net/api/Movies/';
+  BASEURL = 'https://corsproxy.io/?url=https://movieapi2023.azurewebsites.net/api/Movies/';
   getMovieData(): Observable<Movie[]> {
   return this.http.get<any>(this.BASEURL)}
 }
