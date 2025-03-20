@@ -1,16 +1,17 @@
 <section class="main">
     <aside class="haku">
         <section class="hakualue">
-            
             <input type="text" class="hakukentta" placeholder="Type your search.." [(ngModel)]="term" />
-            <button class="hakunapit" (click)="SearchComedy()">Comedy</button>
-            <button class="hakunapit" (click)="SearchAction()">Action</button>
-            <button class="hakunapit" (click)="getReleaseDatesEka()">1990-2000</button>
-            <button class="hakunapit" (click)="getElokuvat()">All</button>
-            <button class="hakunapit" (click)="sortB(false)">Newest</button>
-            <button class="hakunapit" (click)="sortB(true)">Oldest</button>
-            <button class="hakunapit" (click)="sortA(true)">Asc</button>
-            <button class="hakunapit" (click)="sortA(false)">Desc</button>
+            <section class="buttons">
+                <button class="hakunapit" (click)="SearchComedy()">Comedy</button>
+                <button class="hakunapit" (click)="SearchAction()">Action</button>
+                <button class="hakunapit" (click)="getReleaseDatesEka()">1990-2000</button>
+                <button class="hakunapit" (click)="getElokuvat()">All</button>
+                <button class="hakunapit" (click)="sortB(false)">Newest</button>
+                <button class="hakunapit" (click)="sortB(true)">Oldest</button>
+                <button class="hakunapit" (click)="sortA(true)">Asc</button>
+                <button class="hakunapit" (click)="sortA(false)">Desc</button>
+            </section>
         </section>
     </aside>
 
